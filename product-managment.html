@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blu-store</title>
+    <style>
+        img{
+            position: absolute;
+            z-index: -1;
+            background-size: 100%;
+            width: screen;
+            height: screen;
+        }
+        .login1{
+    position: absolute;
+    z-index: 1;
+    /* margin-left: 35%;
+    margin-top: 4%; */
+    /* backdrop-filter: blur(24px); */
+    /* background-color: hsla(230, 75%, 32%, .1); */
+   width: 100%;
+   height: 247%;
+}
+    </style>
+</head>
+<body class="bg-zinc-900">
+    <img id="iii" src="./src/nn.png" alt="">
+    <section id="buy_menu" class="login1 hidden ">
+        <div class="flex justify-center item-center mt-96 h-98 ">
+            <div class="w-96 p-6 shadow-xl bg-zinc-900 rounded-md border-b-2 border-l-2 border-blue-600">
+                <a id="buy_close" class="flex text-2xl hover:text-3xl transition-all text-white hover:text-blue-600 item-end justify-end" href="#"><i class="fa-solid fa-xmark"></i></a>
+                <h1 class="text-3xl block text-center font-bold"><i class="fa-solid fa-screwdriver-wrench text-blue-600"></i></h1>
+                
+                <hr class="mt-3 ">
+                <div class="mt-3">
+                    <label for="username" class="block text-base text-white mb-2">Catagory Name</label>
+                    <input type="text" id="username" class=" w-full text-base px-2 py-1 focus:outline-none focus:ring-0 bg-zinc-900 border-b focus:border-white" placeholder="Enter your username" />
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base text-white mb-2">Catagory Descreption</label>
+                    <input type="text" id="username" class=" w-full text-base px-2 py-1 focus:outline-none focus:ring-0 bg-zinc-900 border-b focus:border-white" placeholder="Enter your username" />
+                </div>
+                <div class="mt-3">
+                    <label for="number" class="block text-base text-white mb-2">Catagory Price</label>
+                    <input type="number" id="number" class=" w-full text-base px-2 py-1 focus:outline-none focus:ring-0 bg-zinc-900 border-b focus:border-white text-white" placeholder="Enter your username" />
+                </div>
+                <div class="mt-5">
+                    <button type="button" class="border-2 border-blue-600 bg-blue-600 text-white py-1 w-full rounded-md hover:bg-transparent hover:bg-blue-600 hover:text-blue-600 font-semibold ">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Pro_menu" class="login1 hidden ">
+        <div class="flex justify-center item-center mt-96 h-98 ">
+            <div class="w-96 p-6 shadow-xl bg-zinc-900 rounded-md border-b-2 border-l-2 border-blue-600">
+                <a id="Pro_close" class="flex text-2xl hover:text-3xl transition-all text-white hover:text-blue-600 item-end justify-end" href="#"><i class="fa-solid fa-xmark"></i></a>
+                <h1 class="text-3xl block text-center font-bold"><i class="fa-solid fa-screwdriver-wrench text-blue-600"></i></h1>
+                
+                <hr class="mt-3 ">
+                <div class="mt-3">
+                    <label for="username" class="block text-base font-semibold text-white mb-2">CMD room</label>
+                    <select name="CMD" id="cmd" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id">
+                        <option value="catagory1">catagory1</option>
+                        <option value="catagory2">catagory2</option>
+                        <option value="catagory3">catagory3</option>
+                        <option value="catagory4">catagory4</option>
+                    </select>
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base text-white mb-2">Product Stock</label>
+                    <input type="text" id="username" class=" w-full text-base px-2 py-1 focus:outline-none focus:ring-0 bg-zinc-900 border-b focus:border-white" placeholder="Enter your username" />
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base text-white mb-2">Product Descreption</label>
+                    <input type="text" id="username" class=" w-full text-base px-2 py-1 focus:outline-none focus:ring-0 bg-zinc-900 border-b focus:border-white" placeholder="Enter your username" />
+                </div>
+                <div class="mt-5">
+                    <button type="button" class="border-2 border-blue-600 bg-blue-600 text-white py-1 w-full rounded-md hover:bg-transparent hover:bg-blue-600 hover:text-blue-600 font-semibold ">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class=" flex flex-row justify-between">
+        <a href="#" id="menu_btn"><i class="fa-solid fa-bars justify-between p-6 scale-150 pl-14 text-white md:hidden"></i></a>
+        <div class="hidden md:flex">
+            <ul class=" flex flex-row justify-between p-6 pl-24 gap-24 text-white font-bold ">
+                <li><a href="./index.html" class="hover:text-blue-600 hover:text-lg transition-all">About us</a></li>
+                <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">Support</a></li>
+                <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">System Sittings</a></li>
+            </ul>
+        </div>
+        <div class="user-info flex p-6 text-white font-bold">
+            <div class="username text-white">${UserData.username}</div>
+            <img class="rounded-full " src="https://cdn.discordapp.com/avatars/${UserData.id}/${UserData.avatar}.png" width="54">
+         </div>
+    </nav>
+    <nav id="menu" class=" hidden md:hidden absolute  flex-col items-center justify-center w-screen h-72 bg-zinc-900 border-b-2 border-blue-600">
+        <ul class=" flex flex-col justify-center items-center p-6  gap-14 text-white font-bold ">
+            <li><a href="#About us" class="hover:text-blue-600 hover:text-lg transition-all">About us</a></li>
+            <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">Support</a></li>
+            <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">System Sittings</a></li>
+        </ul>
+    </nav>
+    <h1 class="text-3xl font-bold text-white ml-16 md:ml-32 mt-16">Categories</h1>
+    <section class=" flex flex-col items-center  mt-32 w-screen   h-auto ">
+        <a href="#" id="buy_btn" class="mb-9 "> <h1 class="text-3xl font-bold text-white hover:text-blue-600 hover:scale-105 transition-all">Add catagory</h1> </a>
+        <div class="container flex flex-wrap items-center justify-center gap-x-6 gap-y-6">
+                <div id="card" class=" flex flex-col border-dashed border-2 border-slate-700 bg-zinc-900 w-[450px] h-[280px] p-10 items-center ">
+                    <div class=" flex space-x-52 text-white">
+                        <h1 class="font-bold">Catagory Name</h1>
+                         <h2 class="font-semibold">100$</h2>
+                    </div>
+                    <div>
+                    <p class="mt-12  line-clamp-4 text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quod culpa quasi vero suscipit nam saepe, eos omnis harum, tempora, provident error cum dicta molestias. Ea, voluptatem. Repellat hic ea molestias quasi, aut nulla laborum fugit libero fugiat molestiae! Quis quia cumque, possimus culpa nostrum eaque at assumenda officia mollitia est. Veniam, doloremque ipsum voluptatibus cum omnis corrupti adipisci id exercitationem repudiandae itaque. Ex eligendi non sit amet incidunt? Harum consequuntur, quam quae obcaecati, beatae vitae cumque dolorum alias similique, eum quod modi mollitia dolores inventore? Fugit dolore ab pariatur ratione sed, animi incidunt. Voluptatibus eaque illo commodi similique doloribus?</p>
+                </div>
+                    <a href="#" id="buy_btn" class=" flex items-center justify-center  text-white hover:bg-blue-700 hover:scale-105 transition-all bg-blue-600 ml-72 mt-3 w-20 h-10 p-4" >Delete</a>
+                </div>
+                <div id="card" class=" flex flex-col border-dashed border-2 border-slate-700 bg-zinc-900 w-[450px] h-[280px] p-10 items-center ">
+                    <div class=" flex space-x-52 text-white">
+                        <h1 class="font-bold">Catagory Name</h1>
+                         <h2 class="font-semibold">100$</h2>
+                    </div>
+                    <div>
+                    <p class="mt-12  line-clamp-4 text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quod culpa quasi vero suscipit nam saepe, eos omnis harum, tempora, provident error cum dicta molestias. Ea, voluptatem. Repellat hic ea molestias quasi, aut nulla laborum fugit libero fugiat molestiae! Quis quia cumque, possimus culpa nostrum eaque at assumenda officia mollitia est. Veniam, doloremque ipsum voluptatibus cum omnis corrupti adipisci id exercitationem repudiandae itaque. Ex eligendi non sit amet incidunt? Harum consequuntur, quam quae obcaecati, beatae vitae cumque dolorum alias similique, eum quod modi mollitia dolores inventore? Fugit dolore ab pariatur ratione sed, animi incidunt. Voluptatibus eaque illo commodi similique doloribus?</p>
+                </div>
+                    <a href="#" id="buy_btn" class=" flex items-center justify-center  text-white hover:bg-blue-700 hover:scale-105 transition-all bg-blue-600 ml-72 mt-3 w-20 h-10 p-4" >Delete</a>
+                </div>
+                <div id="card" class=" flex flex-col border-dashed border-2 border-slate-700 bg-zinc-900 w-[450px] h-[280px] p-10 items-center ">
+                    <div class=" flex space-x-52 text-white">
+                        <h1 class="font-bold">Catagory Name</h1>
+                         <h2 class="font-semibold">100$</h2>
+                    </div>
+                    <div>
+                    <p class="mt-12  line-clamp-4 text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quod culpa quasi vero suscipit nam saepe, eos omnis harum, tempora, provident error cum dicta molestias. Ea, voluptatem. Repellat hic ea molestias quasi, aut nulla laborum fugit libero fugiat molestiae! Quis quia cumque, possimus culpa nostrum eaque at assumenda officia mollitia est. Veniam, doloremque ipsum voluptatibus cum omnis corrupti adipisci id exercitationem repudiandae itaque. Ex eligendi non sit amet incidunt? Harum consequuntur, quam quae obcaecati, beatae vitae cumque dolorum alias similique, eum quod modi mollitia dolores inventore? Fugit dolore ab pariatur ratione sed, animi incidunt. Voluptatibus eaque illo commodi similique doloribus?</p>
+                </div>
+                    <a href="#" id="buy_btn" class=" flex items-center justify-center  text-white hover:bg-blue-700 hover:scale-105 transition-all bg-blue-600 ml-72 mt-3 w-20 h-10 p-4" >Delete</a>
+                </div>
+                <div id="card" class=" flex flex-col border-dashed border-2 border-slate-700 bg-zinc-900 w-[450px] h-[280px] p-10 items-center ">
+                    <div class=" flex space-x-52 text-white">
+                        <h1 class="font-bold">Catagory Name</h1>
+                         <h2 class="font-semibold">100$</h2>
+                    </div>
+                    <div>
+                    <p class="mt-12  line-clamp-4 text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quod culpa quasi vero suscipit nam saepe, eos omnis harum, tempora, provident error cum dicta molestias. Ea, voluptatem. Repellat hic ea molestias quasi, aut nulla laborum fugit libero fugiat molestiae! Quis quia cumque, possimus culpa nostrum eaque at assumenda officia mollitia est. Veniam, doloremque ipsum voluptatibus cum omnis corrupti adipisci id exercitationem repudiandae itaque. Ex eligendi non sit amet incidunt? Harum consequuntur, quam quae obcaecati, beatae vitae cumque dolorum alias similique, eum quod modi mollitia dolores inventore? Fugit dolore ab pariatur ratione sed, animi incidunt. Voluptatibus eaque illo commodi similique doloribus?</p>
+                </div>
+                    <a href="#" id="buy_btn" class=" flex items-center justify-center  text-white hover:bg-blue-700 hover:scale-105 transition-all bg-blue-600 ml-72 mt-3 w-20 h-10 p-4" >Delete</a>
+                </div>  
+        </div>
+    </section>
+    <section class="mt-36">
+        <label class="text-3xl font-bold text-white ml-32 ">Products</label>
+        <a href="#" id="Pro_btn" class=" flex items-center justify-center  text-white hover:bg-blue-700 hover:scale-105 transition-all bg-blue-600 ml-32 mt-7 w-32 h-12 p-4" >Add Product</a>
+    </section>
+  
+<footer class="mt-96 md:mt-32">
+    <div class=" flex flex-row w-screen items-center justify-center h-44">
+        <!-- <div class=" md:flex justify-center items-center ml-8 pt-8 w-4 md:w-24 ">
+            <a href="#navv"><img src="" alt="spark logo" class=" rounded-full"></a>
+         </div> -->
+        <div class="ml-10 flex flex-col m-14 space-y-8 items-center text-white">
+            <div class="flex font-bold space-x-6 md:space-x-14">
+                <!-- <a href="">سياسه الخصوصيه</a>
+                <a href="">قوانين البيع والشراء</a> -->
+            </div>
+            <div class="font-semibold">
+                <p>Made with <i class="fa-solid fa-heart text-blue-600"></i>  by <span class="text-blue-600 font-bold">Blu Team</span></p>
+            </div>
+        </div>
+        <!-- <div class="flex flex-row mb-28 ml-42 mt-8 space-x-6">
+            <a href=""><i class="fa-brands fa-discord" style="color: #ffffff;"></i></a>
+            <a href=""><i class="fa-solid fa-gavel  hover:text-primary-700" style="color: #ffffff;"></i></a>
+
+        </div> -->
+    </div>
+</footer>
+<script>
+    const menu = document.querySelector("#menu");
+    const menubtn = document.querySelector("#menu_btn");
+    const Probtn = document.querySelector("#Pro_btn");
+    const Promenu = document.querySelector("#Pro_menu");
+    const Proclose = document.querySelector("#Pro_close");
+    const loginbtn = document.querySelector("#buy_btn");
+    const loginmenu = document.querySelector("#buy_menu");
+    const loginclose = document.querySelector("#buy_close");
+
+    menubtn.addEventListener('click', function() {
+     menu.classList.toggle('hidden');
+    });
+    loginbtn.addEventListener('click', function() {
+     loginmenu.classList.toggle('hidden');
+    });
+    Proclose.addEventListener('click', function() {
+        Promenu.classList.toggle('hidden')
+    });
+    Probtn.addEventListener('click', function() {
+      Promenu.classList.toggle('hidden');
+    });
+    loginclose.addEventListener('click', function() {
+        loginmenu.classList.toggle('hidden')
+    });
+
+</script>
+</body>
+</html>

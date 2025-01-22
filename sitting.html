@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blu-store</title>
+    <style>
+        #iii{
+            position: absolute;
+            z-index: -1;
+            background-size: 100%;
+            width: screen;
+            height: screen;
+        }
+        .login1{
+    position: absolute;
+    z-index: 1;
+    /* margin-left: 35%;
+    margin-top: 4%; */
+    /* backdrop-filter: blur(24px); */
+    /* background-color: hsla(230, 75%, 32%, .1); */
+   width: 100%;
+   height: 247%;
+}
+    </style>
+</head>
+<body class="bg-zinc-900">
+    <img id="iii" src="./src/nn.png" alt="">
+    <nav class=" flex flex-row justify-between">
+        <a href="#" id="menu_btn" ><i class="fa-solid fa-bars justify-between p-6 scale-150 pl-14 text-white md:hidden"></i></a>
+        <div class="hidden md:flex">
+            <ul class=" flex flex-row justify-between p-6 pl-24 gap-24 text-white font-bold ">
+                <li><a href="./index.html" class="hover:text-blue-600 hover:text-lg transition-all">About us</a></li>
+                <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">Support</a></li>
+                <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">Products manegment</a></li>
+            </ul>
+        </div>
+        <div class="user-info flex p-6 text-white font-bold">
+            <div class="username text-white">${UserData.username}</div>
+            <img class="rounded-full " src="https://cdn.discordapp.com/avatars/${UserData.id}/${UserData.avatar}.png" width="54">
+         </div>
+    </nav>
+    <nav id="menu" class=" hidden md:hidden absolute  flex-col items-center justify-center w-screen h-72 bg-zinc-900 border-b-2 border-blue-600">
+        <ul class=" flex flex-col justify-center items-center p-6  gap-14 text-white font-bold ">
+            <li><a href="#About us" class="hover:text-blue-600 hover:text-lg transition-all">About us</a></li>
+            <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">Support</a></li>
+            <li><a href="#" id="buy_btn1" class="hover:text-blue-600 hover:text-lg transition-all">Redeem code</a></li>
+        </ul>
+    </nav>
+    <section class=" flex flex-col items-center ju mt-32   h-screen ">
+        <div class=" flex flex-col border-dashed border-2 border-slate-700 bg-zinc-900 w-[450px] h-[600px] p-10 items-center justify-center">
+           <div>
+            <img src="./src/profile.png" alt="" class="w-52 h-52 rounded-full">
+            <a href="" class=" w-5 h-5"><i class="fa-solid fa-user-pen text-blue-600 "></i></a>
+        </div>
+        <div class="mt-3">
+            <label for="username" class="block text-base font-semibold text-white mb-2">Name</label>
+            <input type="text" id="username" class="border-b w-full text-base px-2  focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot name" />
+        </div>
+        <div class="mt-3">
+            <label for="username" class="block text-base font-semibold text-white mb-2">Bot id</label>
+            <input type="text" id="username" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id" />
+        </div>
+        <div class="mt-3">
+            
+            <label for="username" class="block text-base font-semibold text-white ">Invite link</label>
+            <a href="" class="  h-5 pl-96 "><i class="fa-solid fa-copy text-green-700"></i></i></a>
+            <input type="text" id="username" class="border-b w-full text-base px-2  focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot invite link" />
+            <!-- <a href="" class=" w-5 h-5 pr-16"><i class="fa-solid fa-copy text-green-700"></i></i></a> -->
+        </div>
+        </div>
+        
+    </section>
+    <section class="flex flex-col items-center h-screen">
+            <h1 class="text-white font-bold pl-16 mt-11 text-2xl">System Sittings</h1>
+            <div class="flex flex-col mt-11 w-[500px] ">
+                <div class="mt-3">
+                    <label for="username" class="block text-base font-semibold text-white mb-2">Probot id</label>
+                    <input type="text" id="username" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Enter Probot id" />
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base font-semibold text-white mb-2">Bank id</label>
+                    <input type="text" id="username" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Enter your bank id" />
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base font-semibold text-white mb-2">CMD room</label>
+                    <select name="CMD" id="cmd" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id">
+                        <option value="room1">room1</option>
+                        <option value="room2">room2</option>
+                        <option value="room3">room3</option>
+                        <option value="room4">room4</option>
+                    </select>
+                    <!-- <input type="option" id="username" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id" /> -->
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base font-semibold text-white mb-2">Sale status</label>
+                    <select name="CMD" id="cmd" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id">
+                        <option value="open">open</option>
+                        <option value="close">close</option>
+                    </select>
+                    <!-- <input type="option" id="username" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id" /> -->
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base font-semibold text-white mb-2">Logs room</label>
+                    <select name="CMD" id="cmd" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id">
+                        <option value="room1">room1</option>
+                        <option value="room2">room2</option>
+                        <option value="room3">room3</option>
+                        <option value="room4">room4</option>
+                    </select>
+                    <!-- <input type="option" id="username" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id" /> -->
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base font-semibold text-white mb-2">Customer role</label>
+                    <select name="CMD" id="cmd" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id">
+                        <option value="role1">role1</option>
+                        <option value="role2">role2</option>
+                        <option value="role3">role3</option>
+                        <option value="role4">role4</option>
+                    </select>
+                    <!-- <input type="option" id="username" class="border-b w-full text-base px-2 focus:outline-none focus:ring-0 bg-zinc-900 text-white focus:border-white" placeholder="Bot id" /> -->
+                </div>
+            </div>
+    </section>
+<footer class="mt-44 md:mt-32">
+    <div class=" flex flex-row w-screen items-center justify-center h-44">
+        <!-- <div class=" md:flex justify-center items-center ml-8 pt-8 w-4 md:w-24 ">
+            <a href="#navv"><img src="" alt="spark logo" class=" rounded-full"></a>
+         </div> -->
+        <div class="ml-10 flex flex-col m-14 space-y-8 items-center text-white">
+            <div class="flex font-bold space-x-6 md:space-x-14">
+                <!-- <a href="">سياسه الخصوصيه</a>
+                <a href="">قوانين البيع والشراء</a> -->
+            </div>
+            <div class="font-semibold">
+                <p>Made with <i class="fa-solid fa-heart text-blue-600"></i>  by <span class="text-blue-600 font-bold">Blu Team</span></p>
+            </div>
+        </div>
+        <!-- <div class="flex flex-row mb-28 ml-42 mt-8 space-x-6">
+            <a href=""><i class="fa-brands fa-discord" style="color: #ffffff;"></i></a>
+            <a href=""><i class="fa-solid fa-gavel  hover:text-primary-700" style="color: #ffffff;"></i></a>
+
+        </div> -->
+    </div>
+</footer>
+<script>
+    const menu = document.querySelector("#menu");
+    const menubtn = document.querySelector("#menu_btn");
+    const loginbtn = document.querySelector("#buy_btn");
+    const loginmenu = document.querySelector("#buy_menu");
+    const loginclose = document.querySelector("#buy_close");
+
+    menubtn.addEventListener('click', function() {
+     menu.classList.toggle('hidden');
+    });
+    loginbtn.addEventListener('click', function() {
+     loginmenu.classList.toggle('hidden');
+    });
+    loginclose.addEventListener('click', function() {
+        loginmenu.classList.toggle('hidden')
+    });
+
+</script>
+</body>
+</html>

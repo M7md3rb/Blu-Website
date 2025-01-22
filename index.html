@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <title>Blu-store</title>
+    <style>
+        #iii{
+            position: absolute;
+            z-index: -1;
+            background-size: 100%;
+            width: screen;
+            height: screen;
+        }
+        .login1{
+    position: absolute;
+    z-index: 1;
+    /* margin-left: 35%;
+    margin-top: 4%; */
+    /* backdrop-filter: blur(24px); */
+    /* background-color: hsla(230, 75%, 32%, .1); */
+   width: 100%;
+   height: 247%;
+}
+    </style>
+</head>
+<body class="bg-zinc-900">
+    <img src="./src/nn.png" id="iii" alt="">
+    <section id="buy_menu" class="login1 hidden ">
+        <div class="flex justify-center item-center mt-96 h-98 ">
+            <div class="w-96 p-6 shadow-xl bg-zinc-900 rounded-md border-b-2 border-blue-600">
+                <a id="buy_close" class="flex text-2xl hover:text-3xl transition-all text-white hover:text-blue-600 item-end justify-end" href="#"><i class="fa-solid fa-xmark"></i></a>
+                <h1 class="text-3xl block text-center font-bold"><i class="fa-solid fa-screwdriver-wrench text-blue-600"></i></h1>
+                
+                <hr class="mt-3 ">
+                <div class="mt-3">
+                    <label for="username" class="block text-base text-white mb-2">Put Token bot</label>
+                    <input type="text" id="username" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 bg-zinc-900 border-dashed focus:border-white" placeholder="Enter your username" />
+                </div>
+                <div class="mt-3">
+                    <label for="username" class="block text-base text-white mb-2">Put your id</label>
+                    <input type="text" id="username" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 bg-zinc-900 border-dashed focus:border-white" placeholder="Enter your username" />
+                </div>
+                <div class="mt-3 flex justify-between item-center ">
+                </div>
+                <div class="mt-5">
+                    <button type="button" class="border-2 border-blue-600 bg-blue-600 text-white py-1 w-full rounded-md hover:bg-transparent hover:bg-blue-600 hover:text-blue-600 font-semibold ">Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class=" flex flex-row justify-between">
+        <a href="#" id="menu_btn"><i class="fa-solid fa-bars justify-between p-6 scale-150 pl-14 text-white md:hidden"></i></a>
+        <div class="hidden md:flex">
+            <ul class=" flex flex-row justify-between p-6 pl-24 gap-24 text-white font-bold ">
+                <li><a href="#About us" class="hover:text-blue-600 hover:text-lg transition-all">About us</a></li>
+                <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">Support</a></li>
+                <li><a href="#" id="buy_btn" class="hover:text-blue-600 hover:text-lg transition-all">Redeem code</a></li>
+            
+            </ul>
+        </div>
+        <div class="user-info flex p-6 text-white font-bold">
+            <div class="username text-white">${UserData.username}</div>
+            <img class="rounded-full " src="https://cdn.discordapp.com/avatars/${UserData.id}/${UserData.avatar}.png" width="54">
+         </div>
+    </nav>
+    <nav id="menu" class=" hidden md:hidden absolute  flex-col items-center justify-center w-screen h-74 bg-zinc-900 border-b-2 border-blue-600">
+        <ul class=" flex flex-col justify-center items-center p-6  gap-14 text-white font-bold ">
+            <li><a href="#About us" class="hover:text-blue-600 hover:text-lg transition-all">About us</a></li>
+            <li><a href="#" class="hover:text-blue-600 hover:text-lg transition-all">Support</a></li>
+            <li><a href="#" id="buy_btn1" class="hover:text-blue-600 hover:text-lg transition-all">Redeem code</a></li>
+            <li><a href="#" id="buy_btn1" class="hover:text-blue-600 hover:text-lg transition-all">Redeem code</a></li>
+        </ul>
+    </nav>
+    <section class=" flex flex-col items-center justify-center h-screen ">
+        <div class=" flex flex-col items-center ">
+            <h1  class="text-white font-bold text-4xl md:text-7xl">Welcome To <span class="text-blue-600">Blu-store</span></h1>
+            <p class=" text-white text-xl md:text-2xl pt-8 w-80 md:w-[600px]">where there is quality, price, reliable services, and a return service that is even faster than purchasing</p>
+        </div>
+        <div class="flex flex-col items-center justify-center pt-14 md:pt-28">
+            <a href="#"  class=" flex flex-col items-center justify-center  text-white hover:bg-blue-700 hover:scale-110 transition-all bg-blue-600 w-64 md:w-96 p-6" >Buy Membership</a>
+            <!-- <a href="" class=" flex flex-col items-center justify-center  text-white bg-blue-600  w-96 p-6" >Buy Membership</a> -->
+    </div>
+    </section>
+    <section class="information_area">
+        <div id="About us" class=" bon container mx-auto px-6 space-x-6 flex flex-col-reverse py-32 ml-18 md:flex-row">
+            <div class=" md:w-1/2 flex flex-col justify-center  md:mt-48 py-8 text-center md:text-left space-y-5">
+                <h1 class="font-bold text-3xl text-white md:text-5xl"> What is Blu Bot ?</h1>
+                <p  class="text-white">One of the features of our bot is that it has a complete record of incoming sales. You can set a minimum amount to purchase products. You can also set individual conversion hands for each product. You can also add more than one rank after a purchase and many other features. Buy a membership and discover it.</p>
+                <a href="#" class="py-2 px-6 self-center md:self-start text-white bg-blue-600 hover:bg-blue-700 hover:scale-110 transition-all">Invite me </a>
+            </div>
+            <div class="md:w-1/2"><img src="/src/undraw_undraw_undraw_undraw_undraw_undraw_undraw_undraw_team_effort_yj7m_ej3u_wvay_kpbw_-1-_tsjm_-1-_yvec_-1-_7peh_-1-_hcn7.svg" alt=""></div>
+        </div>
+</section>
+<footer class="mt-44 md:mt-64">
+    <div class=" flex flex-row w-screen items-center justify-center h-44">
+        <!-- <div class=" md:flex justify-center items-center ml-8 pt-8 w-4 md:w-24 ">
+            <a href="#navv"><img src="" alt="spark logo" class=" rounded-full"></a>
+         </div> -->
+        <div class="ml-10 flex flex-col m-14 space-y-8 items-center text-white">
+            <div class="flex font-bold space-x-6 md:space-x-14">
+                <!-- <a href="">سياسه الخصوصيه</a>
+                <a href="">قوانين البيع والشراء</a> -->
+            </div>
+            <div class="font-semibold">
+                <p>Made with <i class="fa-solid fa-heart text-blue-600"></i>  by <span class="text-blue-600 font-bold">Blu Team</span></p>
+            </div>
+        </div>
+        <!-- <div class="flex flex-row mb-28 ml-42 mt-8 space-x-6">
+            <a href=""><i class="fa-brands fa-discord" style="color: #ffffff;"></i></a>
+            <a href=""><i class="fa-solid fa-gavel  hover:text-primary-700" style="color: #ffffff;"></i></a>
+
+        </div> -->
+    </div>
+</footer>
+<script>
+    const menu = document.querySelector("#menu");
+    const menubtn = document.querySelector("#menu_btn");
+    const loginbtn1 = document.querySelector("#buy_btn1");
+    const loginbtn = document.querySelector("#buy_btn");
+    const loginmenu = document.querySelector("#buy_menu");
+    const loginclose = document.querySelector("#buy_close");
+
+    menubtn.addEventListener('click', function() {
+     menu.classList.toggle('hidden');
+    });
+    loginbtn.addEventListener('click', function() {
+     loginmenu.classList.toggle('hidden');
+    });
+    loginbtn1.addEventListener('click', function() {
+     loginmenu.classList.toggle('hidden');
+    });
+    loginclose.addEventListener('click', function() {
+        loginmenu.classList.toggle('hidden')
+    });
+
+</script>
+</body>
+</html>
